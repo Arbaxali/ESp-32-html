@@ -5,13 +5,13 @@
 <html>
 <!----------------------------CSS---------------------------->
 <style>
-  body {background-color: rgba(128, 128, 128, 0.884)}
+  body {background-color: rgba(83, 51, 160, 0.884)}
   h4 {font-family: arial; text-align: center; color: white;}
   .card
   {
      max-width: 5000px;
      min-height: 100px;
-     background: rgba(255, 0, 0, 0.521);
+     background: whitesmoke;
      padding: 10px;
      font-weight: bold;
      font: 25px calibri;
@@ -20,6 +20,7 @@
      color: blue;
      margin:20px;
      box-shadow: 0px 2px 15px 15px rgba(0,0,0,0.75);
+     border-radius: 6px;
   }
 </style>
 <!----------------------------HTML--------------------------->
@@ -27,8 +28,24 @@
   <div class="card">
     <h1><span style="background-color:white">DYNAMIC-CHARGING</span></h1>
     <h2>
-      AMOUNT : <span style="color:yellow" id="AMOUNT">100000</span>
+      Power consumed(w) : <span style="color:yellow" id="AMOUNT">1000</span>
     </h2>
+    <div class="container">
+      <form action="">
+       <label for="name">Customer Name : </label>
+       <input type="text" id="name" maxlength="20">
+       <br> <br>
+       <label for="cont">Contact Num : </label>
+       <input type="number" id="cont">
+       <br><br>
+       <label for="mail">Email Id : </label>
+       <input type="email" id="mail">
+       <br><br>
+       <input type="submit" onclick ="parent.open('https://lane-charging.000webhostapp.com/payscript.php')"  value ="Pay">
+       <input type="reset" value="Reset">
+      </form>
+   </div>
+
   </div>
   <h4>
     <button onclick="help()">Help</button><br><br>
